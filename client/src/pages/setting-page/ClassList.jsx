@@ -310,6 +310,24 @@ export const ClassList = () => {
                         }
                       />
                     </div>
+                    <div className="item col-45-percent center">
+                      <input
+                        type="text"
+                        className="input--small"
+                        placeholder="Nhập năm học..."
+                        value="2020-2021"
+                        onChange={(e) =>
+                          handler.handleEditInputChange(
+                            e,
+                            i,
+                            classArrState,
+                            setClassArrState,
+                            "nameClass"
+                          )
+                        }
+                      />
+                    </div>
+                    <div className="item col-45-percent center"></div>
                     <div className="item col-45-percent center save-btn__container">
                       <button
                         onClick={(e) =>
@@ -328,7 +346,7 @@ export const ClassList = () => {
               </>
             );
           })}
-          {classArrState.map((item, i) => {
+          {/* {classArrState.map((item, i) => {
             return (
               <>
                 <div className="row content" key={i}>
@@ -405,7 +423,7 @@ export const ClassList = () => {
                 )}
               </>
             );
-          })}
+          })} */}
           <div className="row content add" style={{ display: "none" }}>
             <div className="item col-10-percent center"></div>
             <div className="item col-45-percent center">
