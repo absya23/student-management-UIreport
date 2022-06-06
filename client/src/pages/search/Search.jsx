@@ -423,8 +423,8 @@ export const Search = () => {
       <div className="container">
         <div className="row heading">
           <div className="item col-30-percent center al-left pl-70">Họ Tên</div>
-          <div className="item col-10-percent center al-center">Lớp</div>
-          <div className="item col-10-percent center al-center">Học kỳ</div>
+          <div className="item col-20-percent center al-center">Lớp</div>
+          <div className="item col-10-percent center al-center">Năm học</div>
           <div className="item col-20-percent center al-center">TB HKI</div>
           <div className="item col-20-percent center al-center">TB HKII</div>
           <div className="item col-20-percent center al-center">Thao tác</div>
@@ -437,7 +437,7 @@ export const Search = () => {
                 <div className="item col-30-percent center al-left pl-50">
                   {item.nameStudent}
                 </div>
-                <div className="item col-10-percent center al-center">
+                <div className="item col-20-percent center al-center">
                   {item.nameClass}
                 </div>
                 <div className="item col-10-percent center al-center">

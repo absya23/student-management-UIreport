@@ -246,7 +246,7 @@ export const ClassList = () => {
           <div className="row heading">
             <div className="item col-10-percent center"></div>
             <div className="item col-45-percent center">Tên lớp</div>
-            <div className="item col-45-percent center">Học kì</div>
+            <div className="item col-45-percent center">Năm học</div>
             <div className="item col-45-percent center">Sỉ số</div>
             <div className="item col-45-percent center">Thao tác</div>
           </div>
