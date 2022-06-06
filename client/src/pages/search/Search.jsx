@@ -393,7 +393,7 @@ export const Search = () => {
       <h3>TRA CỨU</h3>
       <div className="guide">
         Nhập tên học sinh, lớp, hoặc điểm mà bạn muốn tìm. Bạn có thể xem chi
-        tiết, chỉnh sửa hoặc xóa học sinh ở đây.
+        tiết, xóa học sinh ở đây.
       </div>
       <div className="grid">
         <div className="row">
@@ -424,8 +424,9 @@ export const Search = () => {
         <div className="row heading">
           <div className="item col-30-percent center al-left pl-70">Họ Tên</div>
           <div className="item col-10-percent center al-center">Lớp</div>
-          <div className="item col-20-percent center al-center">TBHKI</div>
-          <div className="item col-20-percent center al-center">TBHKII</div>
+          <div className="item col-10-percent center al-center">Học kỳ</div>
+          <div className="item col-20-percent center al-center">TB HKI</div>
+          <div className="item col-20-percent center al-center">TB HKII</div>
           <div className="item col-20-percent center al-center">Thao tác</div>
         </div>
 
@@ -438,6 +439,9 @@ export const Search = () => {
                 </div>
                 <div className="item col-10-percent center al-center">
                   {item.nameClass}
+                </div>
+                <div className="item col-10-percent center al-center">
+                  2021-2022
                 </div>
                 <div className="item col-20-percent center al-center">
                   {item.AvgScore1}
@@ -453,7 +457,7 @@ export const Search = () => {
                   >
                     <img src={InfoIcon} alt="" className="info-img" />
                   </button>
-                  <button
+                  {/* <button
                     className="edit-btn"
                     data-set={i}
                     onClick={(e) =>
@@ -465,7 +469,7 @@ export const Search = () => {
                     }
                   >
                     <img src={EditIcon} alt="" className="edit-img" />
-                  </button>
+                  </button> */}
                   <button
                     className="delete-btn"
                     data-set={i}

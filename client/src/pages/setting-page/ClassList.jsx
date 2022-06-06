@@ -246,6 +246,8 @@ export const ClassList = () => {
           <div className="row heading">
             <div className="item col-10-percent center"></div>
             <div className="item col-45-percent center">Tên lớp</div>
+            <div className="item col-45-percent center">Học kì</div>
+            <div className="item col-45-percent center">Sỉ số</div>
             <div className="item col-45-percent center">Thao tác</div>
           </div>
           {classArrState.map((item, i) => {
@@ -263,6 +265,86 @@ export const ClassList = () => {
                   <div className="item col-45-percent center">
                     {item.nameClass}
                   </div>
+                  <div className="item col-45-percent center">2020-2021</div>
+                  <div className="item col-45-percent center">39</div>
+                  <div className="item col-45-percent center">
+                    <button
+                      data-set={i}
+                      onClick={(e) =>
+                        handler.handleClickEditBtn(
+                          e,
+                          classArrState,
+                          setClassArrState
+                        )
+                      }
+                      className="edit-btn"
+                    >
+                      <img className="edit-img" src={EditIcon} alt="" />
+                    </button>
+                    <button
+                      className="delete-btn"
+                      data-set={i}
+                      onClick={(e) => handleEvent.handleClickDeleteBtn.class(e)}
+                    >
+                      <img className="delete-img" src={DeleteIcon} alt="" />
+                    </button>
+                  </div>
+                </div>
+                {item.Edit ? (
+                  <div className="row content">
+                    <div className="item col-10-percent center"></div>
+                    <div className="item col-45-percent center">
+                      <input
+                        type="text"
+                        className="input--small"
+                        placeholder="Nhập tên lớp mới..."
+                        value={item.nameClass}
+                        onChange={(e) =>
+                          handler.handleEditInputChange(
+                            e,
+                            i,
+                            classArrState,
+                            setClassArrState,
+                            "nameClass"
+                          )
+                        }
+                      />
+                    </div>
+                    <div className="item col-45-percent center save-btn__container">
+                      <button
+                        onClick={(e) =>
+                          handleEvent.handleSaveToEditBtn.class(e)
+                        }
+                        data-set={i}
+                        className="save-btn--small"
+                      >
+                        Lưu
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </>
+            );
+          })}
+          {classArrState.map((item, i) => {
+            return (
+              <>
+                <div className="row content" key={i}>
+                  <div className="item col-10-percent center">
+                    <input
+                      type="checkbox"
+                      data-set={i}
+                      checked={item.Checked}
+                      onChange={(e) => handleEvent.handleCheckbox.class(e)}
+                    />
+                  </div>
+                  <div className="item col-45-percent center">
+                    {item.nameClass}
+                  </div>
+                  <div className="item col-45-percent center">2021-2022</div>
+                  <div className="item col-45-percent center">39</div>
                   <div className="item col-45-percent center">
                     <button
                       data-set={i}

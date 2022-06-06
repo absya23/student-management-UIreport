@@ -401,6 +401,9 @@ export const CreateClass = () => {
                 Địa Chỉ
               </div>
               <div className="item col-20-percent center al-center">
+                Tình trạng
+              </div>
+              <div className="item col-20-percent center al-center">
                 Thao tác
               </div>
             </div>
@@ -420,6 +423,9 @@ export const CreateClass = () => {
                     </div>
                     <div className="item col-20-percent center al-center">
                       {item.address}
+                    </div>
+                    <div className="item col-20-percent center al-center">
+                      Chưa có lớp
                     </div>
                     <div className="item col-20-percent center al-center">
                       <button
